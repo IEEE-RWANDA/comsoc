@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About the IEEE Communications Society Rwanda Chapter — our mission, structure, and technical scope.",
+    "About the IEEE Communications Society Rwanda Chapter: our mission, structure, and technical scope.",
 };
 
 const topics = [
@@ -25,7 +25,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Who we are"
-        subtitle="The first chapter under the newly established IEEE Rwanda Subsection — advancing communications engineering from Kigali."
+        subtitle="The first chapter under the newly established IEEE Rwanda Subsection, advancing communications engineering from Kigali."
       />
 
       <Section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
                 advancement of communications and networking science,
                 engineering, and technology in Rwanda. We serve members through
                 technical activities, professional development, and community
-                outreach — and we connect Rwandan engineers, researchers, and
+                outreach, and we connect Rwandan engineers, researchers, and
                 students to ComSoc&apos;s global network of communications
                 professionals.
               </p>
@@ -46,10 +46,10 @@ export default function AboutPage() {
                 We operate as part of the joint{" "}
                 <strong className="text-ink">
                   IEEE Rwanda MTTS/ComSoc/AP-S Chapter
-                </strong>{" "}
-                — spanning the Microwave Theory &amp; Technology,
-                Communications, and Antennas &amp; Propagation societies — the
-                first chapter under the newly established IEEE Rwanda
+                </strong>
+                , which spans the Microwave Theory &amp; Technology,
+                Communications, and Antennas &amp; Propagation societies. It is
+                the first chapter under the newly established IEEE Rwanda
                 Subsection, based at Carnegie Mellon University Africa in
                 Kigali.
               </p>
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <Reveal delay={100}>
             <SectionHeading eyebrow="Structure" title="Part of IEEE" />
             <p className="leading-relaxed text-slate-600">
-              The chapter operates under the IEEE Rwanda Subsection — the first
+              The chapter operates under the IEEE Rwanda Subsection, the first
               IEEE geographic unit in Rwanda, launched in Kigali in July 2026
               within{" "}
               <a
@@ -75,8 +75,8 @@ export default function AboutPage() {
                 className="font-medium text-ieee-blue hover:underline"
               >
                 IEEE Region 8
-              </a>{" "}
-              — and is affiliated with the{" "}
+              </a>
+              . It is affiliated with the{" "}
               <a
                 href="https://www.comsoc.org"
                 target="_blank"
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 "Support for student branches and young professionals",
                 "Collaboration with industry, academia, and government",
                 "Access to IEEE ComSoc publications, conferences, and training",
-                "International partnerships through ComSoc's Twin Chapter Program — twinned with the IEEE ComSoc Kerala Chapter",
+                "International partnerships through ComSoc's Twin Chapter Program, twinned with the IEEE ComSoc Kerala Chapter",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-slate-600">
                   <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ieee-blue/10 font-mono text-[10px] font-bold text-ieee-blue">

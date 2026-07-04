@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600">
             We bring together the engineers, researchers, and students building
-            Rwanda&apos;s digital future — through technical talks, hands-on
+            Rwanda&apos;s digital future through technical talks, hands-on
             workshops, and a global community of communications professionals.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
@@ -138,7 +138,7 @@ export default function Home() {
                 </h3>
                 <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/80">
                   Distinguished lecturers, hands-on sessions, and joint
-                  technical events with chapters around the world — including
+                  technical events with chapters around the world, including
                   our Twin Chapter, IEEE ComSoc Kerala.
                 </p>
               </div>
@@ -240,7 +240,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 max-w-xl text-white/85">
                 Join the world&apos;s largest community of communications
-                professionals — and help build its home in Rwanda.
+                professionals and help build its home in Rwanda.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link

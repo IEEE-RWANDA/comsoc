@@ -22,7 +22,7 @@ const benefits = [
   {
     title: "Local community",
     description:
-      "Chapter events in Rwanda — technical talks, workshops, and networking with industry and academia.",
+      "Chapter events in Rwanda: technical talks, workshops, and networking with industry and academia.",
   },
   {
     title: "Career development",
@@ -36,7 +36,7 @@ const steps = [
     step: "01",
     title: "Join IEEE",
     description:
-      "Create an IEEE account and choose a membership grade — student rates are heavily discounted, with reduced pricing for members in Rwanda.",
+      "Create an IEEE account and choose a membership grade. Student rates are heavily discounted, with reduced pricing for members in Rwanda.",
   },
   {
     step: "02",
@@ -58,7 +58,7 @@ export default function MembershipPage() {
       <PageHero
         eyebrow="Membership"
         title="Join the network"
-        subtitle="The world's largest community of communications professionals — and its home in Rwanda."
+        subtitle="The world's largest community of communications professionals, and its home in Rwanda."
       />
 
       <Section>
@@ -139,7 +139,7 @@ export default function MembershipPage() {
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
               IEEE student membership is significantly discounted, and ComSoc
               offers additional student resources, competitions, and travel
-              grants. If you&apos;re at a Rwandan university, get in touch — we
+              grants. If you&apos;re at a Rwandan university, get in touch. We
               can help you and your student branch get started.
             </p>
           </div>

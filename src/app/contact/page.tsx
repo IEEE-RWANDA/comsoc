@@ -52,7 +52,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="mt-1 inline-block font-medium text-ieee-blue hover:underline"
                 >
-                  LinkedIn — IEEE Rwanda MTTS/ComSoc/AP-S Chapter →
+                  IEEE Rwanda MTTS/ComSoc/AP-S Chapter →
                 </a>
               </li>
             </ul>
@@ -79,7 +79,7 @@ export default function ContactPage() {
               We partner with universities, telecom operators, regulators, and
               tech companies on events, training, and outreach. If your
               organization would like to host a talk, sponsor a workshop, or
-              collaborate on a program, email us — we typically respond within
+              collaborate on a program, email us. We typically respond within
               a few days.
             </p>
             <div className="mt-8 rounded-2xl border border-slate-200 bg-surface p-7">

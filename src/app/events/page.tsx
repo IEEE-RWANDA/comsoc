@@ -6,7 +6,7 @@ import { events, type EventItem } from "@/data/site";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Upcoming and past events of the IEEE ComSoc Rwanda Chapter — workshops, technical talks, and networking.",
+    "Upcoming and past events of the IEEE ComSoc Rwanda Chapter: workshops, technical talks, and networking.",
 };
 
 function EventRow({ event, first }: { event: EventItem; first: boolean }) {
@@ -74,7 +74,7 @@ export default function EventsPage() {
       <PageHero
         eyebrow="Events"
         title="Talks, workshops & sessions"
-        subtitle="Open to members, students, and the wider tech community — in Kigali and online."
+        subtitle="Open to members, students, and the wider tech community, in Kigali and online."
       />
 
       <Section>
@@ -101,8 +101,8 @@ export default function EventsPage() {
                 className="font-medium text-ieee-blue hover:underline"
               >
                 LinkedIn page
-              </a>{" "}
-              — follow us to be the first to know.
+              </a>. Follow
+              us to be the first to know.
             </p>
           </div>
         )}
