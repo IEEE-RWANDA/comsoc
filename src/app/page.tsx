@@ -34,8 +34,6 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <div className="relative overflow-hidden bg-ink text-white">
         <div className="dot-grid absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
-        <div className="animate-glow absolute -top-32 left-1/4 h-[28rem] w-[28rem] rounded-full bg-accent/25 blur-3xl" />
-        <div className="animate-glow absolute -bottom-40 right-[5%] h-96 w-96 rounded-full bg-ieee-blue/30 blur-3xl [animation-delay:4s]" />
         <NetworkCanvas className="opacity-50" />
 
         <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-40 md:px-6 md:pb-32 md:pt-52">
@@ -132,7 +130,6 @@ export default function Home() {
           <Reveal className="md:col-span-2 md:row-span-2">
             <div className="group relative h-full min-h-[280px] overflow-hidden rounded-2xl border border-slate-200 bg-ink p-8 transition duration-300 hover:border-accent/50">
               <div className="dot-grid absolute inset-0 opacity-40" />
-              <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
               <div className="relative flex h-full flex-col justify-end">
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-bright">
                   Technical program
@@ -235,7 +232,6 @@ export default function Home() {
         <Reveal>
           <div className="rounded-3xl bg-gradient-to-r from-accent to-ieee-blue p-px">
             <div className="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-ink px-8 py-14 md:px-14 md:py-16">
-              <div className="animate-glow absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
               <div className="relative">
                 <Eyebrow>[ 03 — Join us ]</Eyebrow>
                 <h2 className="max-w-2xl font-display text-3xl font-bold tracking-tight text-white md:text-5xl">

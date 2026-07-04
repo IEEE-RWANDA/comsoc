@@ -83,7 +83,6 @@ export function PageHero({
   return (
     <div className="relative overflow-hidden bg-ink pb-20 pt-36 text-white md:pb-24 md:pt-44">
       <div className="dot-grid absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
-      <div className="animate-glow absolute -top-24 right-[10%] h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
       <NetworkCanvas className="opacity-40" />
       <div className="relative mx-auto max-w-6xl px-4 md:px-6">
         {eyebrow && <Eyebrow dark>{eyebrow}</Eyebrow>}

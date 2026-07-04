@@ -85,7 +85,6 @@ export default function TeamPage() {
         <Reveal>
           <div className="rounded-3xl bg-gradient-to-r from-accent to-ieee-blue p-px">
             <div className="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-ink px-8 py-14 text-center md:px-14">
-              <div className="animate-glow absolute -left-20 -top-20 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
               <div className="relative">
                 <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
                   Want to volunteer?
