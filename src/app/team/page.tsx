@@ -58,7 +58,7 @@ export default function TeamPage() {
                   <h3 className="font-display font-semibold tracking-tight text-ink">
                     {member.name}
                   </h3>
-                  <p className="mt-0.5 font-mono text-xs uppercase tracking-widest text-accent">
+                  <p className="mt-0.5 font-mono text-xs uppercase tracking-widest text-ieee-blue">
                     {member.role}
                   </p>
                   <p className="mt-2 text-sm text-slate-500">
@@ -69,7 +69,7 @@ export default function TeamPage() {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
+                      className="mt-3 inline-block text-sm font-medium text-ieee-blue hover:underline"
                     >
                       LinkedIn →
                     </a>
@@ -97,7 +97,7 @@ export default function TeamPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-block rounded-lg bg-accent-bright px-6 py-3.5 font-semibold text-ink transition hover:bg-teal-300"
+                  className="mt-8 inline-block rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
                 >
                   Contact us
                 </Link>

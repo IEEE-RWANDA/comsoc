@@ -116,7 +116,7 @@ export default function MembershipPage() {
             href="https://www.ieee.org/membership/join"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-accent-bright px-6 py-3.5 font-semibold text-ink transition hover:bg-teal-300"
+            className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
           >
             Join IEEE →
           </a>

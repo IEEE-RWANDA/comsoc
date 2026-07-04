@@ -55,8 +55,8 @@ export default function NetworkCanvas({ className = "" }: { className?: string }
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.hypot(dx, dy);
           if (dist < LINK_DIST) {
-            ctx.strokeStyle = `rgba(45, 212, 191, ${
-              0.14 * (1 - dist / LINK_DIST)
+            ctx.strokeStyle = `rgba(0, 181, 226, ${
+              0.16 * (1 - dist / LINK_DIST)
             })`;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -66,7 +66,7 @@ export default function NetworkCanvas({ className = "" }: { className?: string }
           }
         }
       }
-      ctx.fillStyle = "rgba(94, 234, 212, 0.5)";
+      ctx.fillStyle = "rgba(77, 208, 240, 0.5)";
       for (const n of nodes) {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 1.4, 0, Math.PI * 2);

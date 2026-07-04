@@ -17,9 +17,19 @@ export function Section({
   );
 }
 
-export function Eyebrow({ children }: { children: ReactNode }) {
+export function Eyebrow({
+  children,
+  dark = false,
+}: {
+  children: ReactNode;
+  dark?: boolean;
+}) {
   return (
-    <p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-accent">
+    <p
+      className={`mb-4 font-mono text-xs uppercase tracking-[0.25em] ${
+        dark ? "text-accent-bright" : "text-ieee-blue"
+      }`}
+    >
       {children}
     </p>
   );
@@ -38,7 +48,7 @@ export function SectionHeading({
 }) {
   return (
     <div className="mb-14 max-w-2xl">
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      {eyebrow && <Eyebrow dark={dark}>{eyebrow}</Eyebrow>}
       <h2
         className={`font-display text-3xl font-bold tracking-tight md:text-5xl ${
           dark ? "text-white" : "text-ink"
@@ -76,7 +86,7 @@ export function PageHero({
       <div className="animate-glow absolute -top-24 right-[10%] h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
       <NetworkCanvas className="opacity-40" />
       <div className="relative mx-auto max-w-6xl px-4 md:px-6">
-        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        {eyebrow && <Eyebrow dark>{eyebrow}</Eyebrow>}
         <h1 className="font-display text-4xl font-bold tracking-tight md:text-6xl">
           {title}
         </h1>

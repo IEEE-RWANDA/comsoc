@@ -72,7 +72,7 @@ export default function AboutPage() {
                 href="https://www.ieeer8.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-accent hover:underline"
+                className="font-medium text-ieee-blue hover:underline"
               >
                 IEEE Region 8
               </a>{" "}
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 href="https://www.comsoc.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-accent hover:underline"
+                className="font-medium text-ieee-blue hover:underline"
               >
                 IEEE Communications Society
               </a>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 "International partnerships through ComSoc's Twin Chapter Program — twinned with the IEEE ComSoc Kerala Chapter",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-slate-600">
-                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 font-mono text-[10px] font-bold text-accent">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ieee-blue/10 font-mono text-[10px] font-bold text-ieee-blue">
                     ✓
                   </span>
                   {item}

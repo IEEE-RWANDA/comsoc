@@ -6,8 +6,10 @@ Subsection (IEEE Region 8), based at Carnegie Mellon University Africa,
 Kigali.
 
 Built with [Next.js](https://nextjs.org) (App Router) and
-[Tailwind CSS](https://tailwindcss.com), using IEEE brand colors
-(IEEE Blue `#00629B`) and the Open Sans typeface per IEEE brand guidelines.
+[Tailwind CSS](https://tailwindcss.com), using the IEEE/ComSoc brand palette
+as seen on comsoc.org — IEEE Dark Blue `#002855`, IEEE Cyan `#00B5E2`,
+IEEE Blue `#00629B`, and ComSoc green `#008542` — with Space Grotesk display
+type, Inter body text, and JetBrains Mono labels.
 
 ## Pages
 

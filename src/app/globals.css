@@ -4,22 +4,28 @@
   --background: #ffffff;
   --foreground: #0f172a;
 
-  /* Brand palette: IEEE blue kept for brand legitimacy, teal as the single
-     modern accent (echoes ComSoc's teal-green). */
+  /* IEEE/ComSoc brand palette, as used on comsoc.org: IEEE Dark Blue
+     #002855 (deepened for page backgrounds), IEEE Cyan #00B5E2 as the
+     accent, IEEE Blue #00629B for text accents on light backgrounds,
+     ComSoc green #008542 for live/upcoming markers. */
   --ieee-blue: #00629b;
-  --ink: #020617;
-  --accent: #14b8a6;
-  --accent-bright: #2dd4bf;
-  --surface: #f8fafc;
+  --ieee-dark: #002855;
+  --ink: #001529;
+  --accent: #00b5e2;
+  --accent-bright: #4dd0f0;
+  --comsoc-green: #008542;
+  --surface: #f5f6fa;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-ieee-blue: var(--ieee-blue);
+  --color-ieee-dark: var(--ieee-dark);
   --color-ink: var(--ink);
   --color-accent: var(--accent);
   --color-accent-bright: var(--accent-bright);
+  --color-comsoc-green: var(--comsoc-green);
   --color-surface: var(--surface);
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);

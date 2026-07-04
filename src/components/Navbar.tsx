@@ -60,7 +60,7 @@ export default function Navbar() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 rounded-lg bg-accent-bright px-4 py-2 text-sm font-semibold text-ink transition hover:bg-teal-300"
+              className="ml-3 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-ink transition hover:bg-accent-bright"
             >
               Join ComSoc
             </a>
@@ -108,7 +108,7 @@ export default function Navbar() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 block rounded-lg bg-accent-bright px-4 py-3 text-center text-sm font-semibold text-ink"
+              className="mt-3 block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-ink"
             >
               Join ComSoc
             </a>

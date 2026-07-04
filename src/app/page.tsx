@@ -59,7 +59,7 @@ export default function Home() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-accent-bright px-6 py-3.5 font-semibold text-ink transition hover:bg-teal-300"
+              className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
             >
               Become a member
             </a>
@@ -185,7 +185,7 @@ export default function Home() {
           </Reveal>
           <Link
             href="/events"
-            className="group mb-14 text-sm font-semibold text-ink hover:text-accent"
+            className="group mb-14 text-sm font-semibold text-ink hover:text-ieee-blue"
           >
             All events{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -207,10 +207,10 @@ export default function Home() {
                   {formatDate(event.date)}
                 </span>
                 {!event.past && (
-                  <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-accent">
+                  <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-comsoc-green">
                     <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-comsoc-green opacity-60" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-comsoc-green" />
                     </span>
                     Upcoming
                   </span>
@@ -222,7 +222,7 @@ export default function Home() {
                 </h3>
                 <p className="mt-1 text-sm text-slate-500">{event.location}</p>
               </div>
-              <span className="hidden text-slate-300 transition-all group-hover:translate-x-1 group-hover:text-accent sm:block">
+              <span className="hidden text-slate-300 transition-all group-hover:translate-x-1 group-hover:text-ieee-blue sm:block">
                 →
               </span>
             </Link>
@@ -248,7 +248,7 @@ export default function Home() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
                     href="/membership"
-                    className="rounded-lg bg-accent-bright px-6 py-3.5 font-semibold text-ink transition hover:bg-teal-300"
+                    className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
                   >
                     Membership benefits
                   </Link>

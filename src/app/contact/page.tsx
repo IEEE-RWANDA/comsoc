@@ -28,7 +28,7 @@ export default function ContactPage() {
                 </span>
                 <a
                   href={`mailto:${site.email}`}
-                  className="mt-1 inline-block font-display text-xl font-semibold tracking-tight text-ink transition-colors hover:text-accent"
+                  className="mt-1 inline-block font-display text-xl font-semibold tracking-tight text-ink transition-colors hover:text-ieee-blue"
                 >
                   {site.email}
                 </a>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                   href={site.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 inline-block font-medium text-accent hover:underline"
+                  className="mt-1 inline-block font-medium text-ieee-blue hover:underline"
                 >
                   LinkedIn — IEEE Rwanda MTTS/ComSoc/AP-S Chapter →
                 </a>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 href="https://www.ieee.org/about/contact"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-ieee-blue hover:underline"
               >
                 ieee.org
               </a>

@@ -31,10 +31,10 @@ function EventRow({ event, first }: { event: EventItem; first: boolean }) {
             {event.title}
           </h3>
           {!event.past && (
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-semibold text-accent">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-comsoc-green/10 px-2.5 py-0.5 text-xs font-semibold text-comsoc-green">
               <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-comsoc-green opacity-60" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-comsoc-green" />
               </span>
               Upcoming
             </span>
@@ -98,7 +98,7 @@ export default function EventsPage() {
                 href="https://www.linkedin.com/showcase/ch08150"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-accent hover:underline"
+                className="font-medium text-ieee-blue hover:underline"
               >
                 LinkedIn page
               </a>{" "}
