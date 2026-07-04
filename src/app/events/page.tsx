@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, Section, SectionHeading } from "@/components/Section";
+import Reveal from "@/components/Reveal";
 import { events, type EventItem } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -8,30 +9,51 @@ export const metadata: Metadata = {
     "Upcoming and past events of the IEEE ComSoc Rwanda Chapter — workshops, technical talks, and networking.",
 };
 
-function EventCard({ event }: { event: EventItem }) {
+function EventRow({ event, first }: { event: EventItem; first: boolean }) {
+  const d = new Date(event.date);
   return (
-    <div className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 sm:flex-row sm:gap-6">
-      <div className="mb-4 flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-lg bg-ieee-blue text-white sm:mb-0">
-        <span className="text-2xl font-bold">
-          {new Date(event.date).getDate()}
+    <div
+      className={`group flex flex-col gap-5 p-6 transition-colors hover:bg-slate-50 sm:flex-row md:p-8 ${
+        first ? "" : "border-t border-slate-200"
+      }`}
+    >
+      <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-ink text-white">
+        <span className="font-display text-2xl font-bold leading-none">
+          {d.getDate()}
         </span>
-        <span className="text-xs uppercase">
-          {new Date(event.date).toLocaleDateString("en-GB", { month: "short" })}
+        <span className="mt-1 font-mono text-[10px] uppercase tracking-widest text-slate-400">
+          {d.toLocaleDateString("en-GB", { month: "short" })} {d.getFullYear()}
         </span>
-        <span className="text-xs">{new Date(event.date).getFullYear()}</span>
       </div>
       <div className="flex-1">
-        <h3 className="text-lg font-semibold text-ieee-dark">{event.title}</h3>
-        <p className="mt-1 text-sm text-gray-500">📍 {event.location}</p>
-        <p className="mt-3 text-sm text-gray-600">{event.description}</p>
+        <div className="flex flex-wrap items-center gap-3">
+          <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+            {event.title}
+          </h3>
+          {!event.past && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-semibold text-accent">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+              </span>
+              Upcoming
+            </span>
+          )}
+        </div>
+        <p className="mt-1 font-mono text-xs uppercase tracking-widest text-slate-400">
+          {event.location}
+        </p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
+          {event.description}
+        </p>
         {event.registrationUrl && (
           <a
             href={event.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block rounded bg-ieee-blue px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="mt-4 inline-block rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
           >
-            Register
+            Register →
           </a>
         )}
       </div>
@@ -40,38 +62,60 @@ function EventCard({ event }: { event: EventItem }) {
 }
 
 export default function EventsPage() {
-  const upcoming = events.filter((e) => !e.past);
-  const past = events.filter((e) => e.past);
+  const upcoming = events
+    .filter((e) => !e.past)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  const past = events
+    .filter((e) => e.past)
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <>
       <PageHero
-        title="Events"
-        subtitle="Workshops, technical talks, and networking sessions — open to members, students, and the wider tech community."
+        eyebrow="[ Events ]"
+        title="Talks, workshops & sessions"
+        subtitle="Open to members, students, and the wider tech community — in Kigali and online."
       />
 
       <Section>
-        <SectionHeading eyebrow="Calendar" title="Upcoming Events" />
+        <Reveal>
+          <SectionHeading eyebrow="[ 01 — Calendar ]" title="Upcoming" />
+        </Reveal>
         {upcoming.length > 0 ? (
-          <div className="space-y-6">
-            {upcoming.map((event) => (
-              <EventCard key={event.title} event={event} />
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            {upcoming.map((event, i) => (
+              <EventRow key={event.title} event={event} first={i === 0} />
             ))}
           </div>
         ) : (
-          <p className="text-gray-600">
-            No upcoming events scheduled yet — check back soon or follow us on
-            social media for announcements.
-          </p>
+          <div className="rounded-2xl border border-dashed border-slate-300 bg-surface p-10 text-center">
+            <p className="font-display font-semibold text-ink">
+              No upcoming events scheduled yet
+            </p>
+            <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
+              New events are announced on our{" "}
+              <a
+                href="https://www.linkedin.com/showcase/ch08150"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-accent hover:underline"
+              >
+                LinkedIn page
+              </a>{" "}
+              — follow us to be the first to know.
+            </p>
+          </div>
         )}
       </Section>
 
       {past.length > 0 && (
-        <Section className="bg-surface">
-          <SectionHeading eyebrow="Archive" title="Past Events" />
-          <div className="space-y-6">
-            {past.map((event) => (
-              <EventCard key={event.title} event={event} />
+        <Section className="border-t border-slate-200 bg-surface">
+          <Reveal>
+            <SectionHeading eyebrow="[ 02 — Archive ]" title="Past events" />
+          </Reveal>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            {past.map((event, i) => (
+              <EventRow key={event.title} event={event} first={i === 0} />
             ))}
           </div>
         </Section>

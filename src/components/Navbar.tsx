@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/events", label: "Events" },
   { href: "/team", label: "Team" },
@@ -18,34 +17,37 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-10 w-10 items-center justify-center rounded bg-ieee-blue font-bold text-white">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6">
+        <Link
+          href="/"
+          className="group flex items-center gap-3"
+          onClick={() => setOpen(false)}
+        >
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-ieee-blue font-display text-sm font-bold text-white">
             CS
           </span>
           <span className="leading-tight">
-            <span className="block text-sm font-bold text-ieee-dark">
+            <span className="block font-display text-sm font-semibold tracking-tight text-white">
               IEEE ComSoc
             </span>
-            <span className="block text-xs text-gray-600">Rwanda Chapter</span>
+            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">
+              Rwanda Chapter
+            </span>
           </span>
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => {
-            const active =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
+            const active = pathname.startsWith(link.href);
             return (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`rounded px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-lg px-3.5 py-2 text-sm transition-colors ${
                     active
-                      ? "bg-ieee-blue text-white"
-                      : "text-gray-700 hover:bg-surface hover:text-ieee-blue"
+                      ? "text-accent-bright"
+                      : "text-slate-300 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {link.label}
@@ -58,9 +60,9 @@ export default function Navbar() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 rounded bg-ieee-gold px-4 py-2 text-sm font-semibold text-ieee-dark transition-opacity hover:opacity-90"
+              className="ml-3 rounded-lg bg-accent-bright px-4 py-2 text-sm font-semibold text-ink transition hover:bg-teal-300"
             >
-              Join IEEE ComSoc
+              Join ComSoc
             </a>
           </li>
         </ul>
@@ -69,7 +71,7 @@ export default function Navbar() {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded text-ieee-dark md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-200 hover:bg-white/5 md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           <svg
@@ -77,24 +79,24 @@ export default function Navbar() {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth={1.5}
           >
             {open ? (
               <path strokeLinecap="round" d="M6 6l12 12M6 18L18 6" />
             ) : (
-              <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
             )}
           </svg>
         </button>
       </nav>
 
       {open && (
-        <ul className="border-t border-gray-200 bg-white px-4 pb-4 md:hidden">
+        <ul className="border-t border-white/10 bg-ink px-4 pb-5 pt-2 md:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="block rounded px-3 py-3 text-sm font-medium text-gray-700 hover:bg-surface"
+                className="block rounded-lg px-3 py-3 text-sm text-slate-200 hover:bg-white/5"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -106,9 +108,9 @@ export default function Navbar() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 block rounded bg-ieee-gold px-4 py-3 text-center text-sm font-semibold text-ieee-dark"
+              className="mt-3 block rounded-lg bg-accent-bright px-4 py-3 text-center text-sm font-semibold text-ink"
             >
-              Join IEEE ComSoc
+              Join ComSoc
             </a>
           </li>
         </ul>

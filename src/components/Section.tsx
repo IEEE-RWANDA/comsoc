@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import NetworkCanvas from "@/components/NetworkCanvas";
 
 export function Section({
   children,
@@ -10,13 +11,57 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={`py-16 ${className}`}>
-      <div className="mx-auto max-w-6xl px-4">{children}</div>
+    <section id={id} className={`py-24 md:py-28 ${className}`}>
+      <div className="mx-auto max-w-6xl px-4 md:px-6">{children}</div>
     </section>
   );
 }
 
+export function Eyebrow({ children }: { children: ReactNode }) {
+  return (
+    <p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-accent">
+      {children}
+    </p>
+  );
+}
+
 export function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+  dark = false,
+}: {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  dark?: boolean;
+}) {
+  return (
+    <div className="mb-14 max-w-2xl">
+      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      <h2
+        className={`font-display text-3xl font-bold tracking-tight md:text-5xl ${
+          dark ? "text-white" : "text-ink"
+        }`}
+      >
+        {title}
+      </h2>
+      {subtitle && (
+        <p
+          className={`mt-4 text-base md:text-lg ${
+            dark ? "text-slate-400" : "text-slate-600"
+          }`}
+        >
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
+
+// Dark page header used on all inner pages: dot-grid texture, glow blob,
+// subtle network canvas. Padding-top clears the fixed navbar.
+export function PageHero({
   eyebrow,
   title,
   subtitle,
@@ -26,31 +71,19 @@ export function SectionHeading({
   subtitle?: string;
 }) {
   return (
-    <div className="mb-10 max-w-2xl">
-      {eyebrow && (
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-ieee-blue">
-          {eyebrow}
-        </p>
-      )}
-      <h2 className="text-3xl font-bold text-ieee-dark">{title}</h2>
-      {subtitle && <p className="mt-3 text-gray-600">{subtitle}</p>}
-    </div>
-  );
-}
-
-export function PageHero({
-  title,
-  subtitle,
-}: {
-  title: string;
-  subtitle?: string;
-}) {
-  return (
-    <div className="bg-gradient-to-r from-ieee-dark to-ieee-blue py-16 text-white">
-      <div className="mx-auto max-w-6xl px-4">
-        <h1 className="text-4xl font-bold">{title}</h1>
+    <div className="relative overflow-hidden bg-ink pb-20 pt-36 text-white md:pb-24 md:pt-44">
+      <div className="dot-grid absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+      <div className="animate-glow absolute -top-24 right-[10%] h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
+      <NetworkCanvas className="opacity-40" />
+      <div className="relative mx-auto max-w-6xl px-4 md:px-6">
+        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        <h1 className="font-display text-4xl font-bold tracking-tight md:text-6xl">
+          {title}
+        </h1>
         {subtitle && (
-          <p className="mt-4 max-w-2xl text-lg text-white/85">{subtitle}</p>
+          <p className="mt-5 max-w-2xl text-base text-slate-400 md:text-lg">
+            {subtitle}
+          </p>
         )}
       </div>
     </div>
