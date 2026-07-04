@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero, Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 
@@ -132,16 +133,26 @@ export default function MembershipPage() {
 
       <Section>
         <Reveal>
-          <div className="rounded-2xl border-l-4 border-accent bg-surface p-8">
-            <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
-              Students: ask about student membership
-            </h3>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
-              IEEE student membership is significantly discounted, and ComSoc
-              offers additional student resources, competitions, and travel
-              grants. If you&apos;re at a Rwandan university, get in touch. We
-              can help you and your student branch get started.
-            </p>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-surface md:grid md:grid-cols-[1fr_18rem]">
+            <div className="border-l-4 border-accent p-8">
+              <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                Students: ask about student membership
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
+                IEEE student membership is significantly discounted, and ComSoc
+                offers additional student resources, competitions, and travel
+                grants. If you&apos;re at a Rwandan university, get in touch. We
+                can help you and your student branch get started.
+              </p>
+            </div>
+            <div className="relative hidden md:block">
+              <Image
+                src="/images/students.jpg"
+                alt="Students working together at a computer"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </Reveal>
       </Section>

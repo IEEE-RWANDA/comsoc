@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Section, SectionHeading } from "@/components/Section";
 import NetworkCanvas from "@/components/NetworkCanvas";
@@ -36,38 +37,61 @@ export default function Home() {
         <div className="dot-grid absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
         <NetworkCanvas className="opacity-50" />
 
-        <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-40 md:px-6 md:pb-32 md:pt-52">
-          <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-ieee-blue">
-            <span className="h-0.5 w-6 rounded-full bg-ieee-blue" aria-hidden />
-            IEEE Communications Society · Rwanda
-          </p>
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink md:text-7xl">
-            Connecting Rwanda to the{" "}
-            <span className="text-ieee-blue">networks</span> of the future.
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600">
-            We bring together the engineers, researchers, and students building
-            Rwanda&apos;s digital future through technical talks, hands-on
-            workshops, and a global community of communications professionals.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="https://www.comsoc.org/membership"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
-            >
-              Become a member
-            </a>
-            <Link
-              href="/events"
-              className="group rounded-lg border border-slate-300 px-6 py-3.5 font-semibold text-ink transition hover:border-slate-400 hover:bg-slate-50"
-            >
-              Explore events{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
+        <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-40 md:px-6 md:pb-32 md:pt-48">
+          <div className="grid items-center gap-14 lg:grid-cols-[1fr_minmax(0,26rem)]">
+            <div>
+              <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-ieee-blue">
+                <span className="h-0.5 w-6 rounded-full bg-ieee-blue" aria-hidden />
+                IEEE Communications Society · Rwanda
+              </p>
+              <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink md:text-6xl xl:text-7xl">
+                Connecting Rwanda to the{" "}
+                <span className="text-ieee-blue">networks</span> of the future.
+              </h1>
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600">
+                We bring together the engineers, researchers, and students
+                building Rwanda&apos;s digital future through technical talks,
+                hands-on workshops, and a global community of communications
+                professionals.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="https://www.comsoc.org/membership"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
+                >
+                  Become a member
+                </a>
+                <Link
+                  href="/events"
+                  className="group rounded-lg border border-slate-300 px-6 py-3.5 font-semibold text-ink transition hover:border-slate-400 hover:bg-slate-50"
+                >
+                  Explore events{" "}
+                  <span className="inline-block transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative hidden lg:block">
+              <Image
+                src="/images/students.jpg"
+                alt="Students working together at a computer"
+                width={640}
+                height={427}
+                priority
+                className="rounded-3xl object-cover shadow-xl shadow-slate-900/10"
+              />
+              <Image
+                src="/images/kigali.jpg"
+                alt="Kigali city skyline at sunset"
+                width={320}
+                height={200}
+                className="absolute -bottom-10 -left-12 w-52 -rotate-3 rounded-2xl border-4 border-white object-cover shadow-xl shadow-slate-900/20"
+              />
+            </div>
           </div>
 
           {/* Stat strip bridging into the light section */}
@@ -126,8 +150,14 @@ export default function Home() {
         </Reveal>
         <div className="grid gap-4 md:grid-cols-3 md:auto-rows-[200px]">
           <Reveal className="md:col-span-2 md:row-span-2">
-            <div className="group relative h-full min-h-[280px] overflow-hidden rounded-2xl bg-ieee-blue p-8 transition duration-300 hover:brightness-105">
-              <div className="dot-grid absolute inset-0 opacity-30" />
+            <div className="group relative h-full min-h-[280px] overflow-hidden rounded-2xl p-8">
+              <Image
+                src="/images/tower.jpg"
+                alt=""
+                fill
+                className="object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-ieee-dark/75" />
               <div className="relative flex h-full flex-col justify-end">
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">
                   Technical program

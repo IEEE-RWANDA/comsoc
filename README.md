@@ -29,6 +29,10 @@ details — no component changes needed. Officer photos go in `public/team/`.
 Items marked `TODO` in that file (official chapter email, social handles,
 officer names) still need to be confirmed by the chapter.
 
+Photos in `public/images/` are Unsplash placeholders (free license, no
+attribution required). Replace them with real chapter photos as soon as
+event photography exists, keeping the same filenames.
+
 ## Development
 
 ```bash

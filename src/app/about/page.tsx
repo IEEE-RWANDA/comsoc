@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero, Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 
@@ -106,6 +107,23 @@ export default function AboutPage() {
             </ul>
           </Reveal>
         </div>
+
+        <Reveal className="mt-20">
+          <div className="relative overflow-hidden rounded-3xl">
+            <Image
+              src="/images/kigali.jpg"
+              alt="Kigali city skyline at sunset"
+              width={1600}
+              height={900}
+              className="h-72 w-full object-cover md:h-96"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+            <p className="absolute bottom-5 left-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-white">
+              <span className="h-0.5 w-6 rounded-full bg-white/70" aria-hidden />
+              Kigali · Home of the chapter
+            </p>
+          </div>
+        </Reveal>
       </Section>
 
       <Section className="border-t border-slate-200 bg-surface">
