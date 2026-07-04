@@ -36,7 +36,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-white/10 bg-ink text-white">
+    <footer className="mt-auto border-t border-white/10 bg-ieee-dark text-white">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4 md:px-6">
         <div>
           <div className="mb-4 flex items-center gap-3">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Section, SectionHeading, Eyebrow } from "@/components/Section";
+import { Section, SectionHeading } from "@/components/Section";
 import NetworkCanvas from "@/components/NetworkCanvas";
 import StatCounter from "@/components/StatCounter";
 import Reveal from "@/components/Reveal";
@@ -32,22 +32,19 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <div className="relative overflow-hidden bg-ink text-white">
+      <div className="relative overflow-hidden border-b border-slate-200 bg-white">
         <div className="dot-grid absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
         <NetworkCanvas className="opacity-50" />
 
         <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-40 md:px-6 md:pb-32 md:pt-52">
-          <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-accent-bright">
+          <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-ieee-blue">
             {"// IEEE Communications Society — Rwanda"}
           </p>
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
+          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink md:text-7xl">
             Connecting Rwanda to the{" "}
-            <span className="text-accent-bright">
-              networks
-            </span>{" "}
-            of the future.
+            <span className="text-ieee-blue">networks</span> of the future.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-400">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600">
             We bring together the engineers, researchers, and students building
             Rwanda&apos;s digital future — through technical talks, hands-on
             workshops, and a global community of communications professionals.
@@ -63,7 +60,7 @@ export default function Home() {
             </a>
             <Link
               href="/events"
-              className="group rounded-lg border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-white/30 hover:bg-white/5"
+              className="group rounded-lg border border-slate-300 px-6 py-3.5 font-semibold text-ink transition hover:border-slate-400 hover:bg-slate-50"
             >
               Explore events{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -73,15 +70,15 @@ export default function Home() {
           </div>
 
           {/* Stat strip bridging into the light section */}
-          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-4">
+          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-4">
             {[
               { value: 3, suffix: "", label: "IEEE societies, one chapter" },
               { value: 2026, suffix: "", label: "Chapter established" },
               { value: 400, suffix: "K+", label: "IEEE members worldwide" },
               { value: 160, suffix: "+", label: "Countries in the network" },
             ].map((s) => (
-              <div key={s.label} className="bg-ink/90 p-6">
-                <p className="font-display text-3xl font-bold text-accent-bright md:text-4xl">
+              <div key={s.label} className="bg-white p-6">
+                <p className="font-display text-3xl font-bold text-ieee-blue md:text-4xl">
                   <StatCounter value={s.value} suffix={s.suffix} />
                 </p>
                 <p className="mt-1.5 text-xs uppercase tracking-widest text-slate-500">
@@ -128,17 +125,17 @@ export default function Home() {
         </Reveal>
         <div className="grid gap-4 md:grid-cols-3 md:auto-rows-[200px]">
           <Reveal className="md:col-span-2 md:row-span-2">
-            <div className="group relative h-full min-h-[280px] overflow-hidden rounded-2xl border border-slate-200 bg-ink p-8 transition duration-300 hover:border-accent/50">
-              <div className="dot-grid absolute inset-0 opacity-40" />
+            <div className="group relative h-full min-h-[280px] overflow-hidden rounded-2xl bg-ieee-blue p-8 transition duration-300 hover:brightness-105">
+              <div className="dot-grid absolute inset-0 opacity-30" />
               <div className="relative flex h-full flex-col justify-end">
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-bright">
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">
                   Technical program
                 </p>
                 <h3 className="mt-2 font-display text-2xl font-bold tracking-tight text-white md:text-3xl">
                   Talks &amp; workshops on 5G/6G, IoT, spectrum, and network
                   security
                 </h3>
-                <p className="mt-3 max-w-lg text-sm leading-relaxed text-slate-400">
+                <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/80">
                   Distinguished lecturers, hands-on sessions, and joint
                   technical events with chapters around the world — including
                   our Twin Chapter, IEEE ComSoc Kerala.
@@ -228,33 +225,34 @@ export default function Home() {
       </Section>
 
       {/* ── CTA band ─────────────────────────────────────────────────── */}
-      <Section className="bg-ink">
+      <Section>
         <Reveal>
-          <div className="rounded-3xl bg-white/15 p-px">
-            <div className="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-ink px-8 py-14 md:px-14 md:py-16">
-              <div className="relative">
-                <Eyebrow>[ 03 — Join us ]</Eyebrow>
-                <h2 className="max-w-2xl font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
-                  Be part of the network.
-                </h2>
-                <p className="mt-4 max-w-xl text-slate-400">
-                  Join the world&apos;s largest community of communications
-                  professionals — and help build its home in Rwanda.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <Link
-                    href="/membership"
-                    className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
-                  >
-                    Membership benefits
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="rounded-lg border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-white/30 hover:bg-white/5"
-                  >
-                    Get in touch
-                  </Link>
-                </div>
+          <div className="relative overflow-hidden rounded-3xl bg-ieee-blue px-8 py-14 md:px-14 md:py-16">
+            <div className="dot-grid absolute inset-0 opacity-25" />
+            <div className="relative">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-white/70">
+                [ 03 — Join us ]
+              </p>
+              <h2 className="max-w-2xl font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
+                Be part of the network.
+              </h2>
+              <p className="mt-4 max-w-xl text-white/85">
+                Join the world&apos;s largest community of communications
+                professionals — and help build its home in Rwanda.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/membership"
+                  className="rounded-lg bg-white px-6 py-3.5 font-semibold text-ieee-blue transition hover:bg-slate-100"
+                >
+                  Membership benefits
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-lg border border-white/40 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
+                >
+                  Get in touch
+                </Link>
               </div>
             </div>
           </div>

@@ -4,7 +4,14 @@ import { useEffect, useRef } from "react";
 
 // Ambient particle-network animation for the hero: drifting nodes joined by
 // lines when close — a nod to communications networks. Pure canvas, no deps.
-export default function NetworkCanvas({ className = "" }: { className?: string }) {
+// `rgb` sets the particle color as "r, g, b" to suit the background.
+export default function NetworkCanvas({
+  className = "",
+  rgb = "0, 98, 155",
+}: {
+  className?: string;
+  rgb?: string;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -55,8 +62,8 @@ export default function NetworkCanvas({ className = "" }: { className?: string }
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.hypot(dx, dy);
           if (dist < LINK_DIST) {
-            ctx.strokeStyle = `rgba(106, 176, 220, ${
-              0.15 * (1 - dist / LINK_DIST)
+            ctx.strokeStyle = `rgba(${rgb}, ${
+              0.16 * (1 - dist / LINK_DIST)
             })`;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -66,7 +73,7 @@ export default function NetworkCanvas({ className = "" }: { className?: string }
           }
         }
       }
-      ctx.fillStyle = "rgba(106, 176, 220, 0.45)";
+      ctx.fillStyle = `rgba(${rgb}, 0.4)`;
       for (const n of nodes) {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 1.4, 0, Math.PI * 2);

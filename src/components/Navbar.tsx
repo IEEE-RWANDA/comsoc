@@ -17,7 +17,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6">
         <Link
           href="/"
@@ -28,10 +28,10 @@ export default function Navbar() {
             CS
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-sm font-semibold tracking-tight text-white">
+            <span className="block font-display text-sm font-semibold tracking-tight text-ink">
               IEEE ComSoc
             </span>
-            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">
+            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
               Rwanda Chapter
             </span>
           </span>
@@ -46,8 +46,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`rounded-lg px-3.5 py-2 text-sm transition-colors ${
                     active
-                      ? "text-accent-bright"
-                      : "text-slate-300 hover:bg-white/5 hover:text-white"
+                      ? "text-ieee-blue"
+                      : "text-slate-600 hover:bg-slate-100 hover:text-ink"
                   }`}
                 >
                   {link.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-200 hover:bg-white/5 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           <svg
@@ -91,12 +91,12 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="border-t border-white/10 bg-ink px-4 pb-5 pt-2 md:hidden">
+        <ul className="border-t border-slate-200 bg-white px-4 pb-5 pt-2 md:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="block rounded-lg px-3 py-3 text-sm text-slate-200 hover:bg-white/5"
+                className="block rounded-lg px-3 py-3 text-sm text-slate-700 hover:bg-slate-100"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

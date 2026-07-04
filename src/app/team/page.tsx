@@ -43,9 +43,9 @@ export default function TeamPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
                   </div>
                 ) : (
-                  <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-ink">
-                    <div className="dot-grid absolute inset-0 opacity-40" />
-                    <span className="relative font-display text-4xl font-bold text-accent-bright">
+                  <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-ieee-blue">
+                    <div className="dot-grid absolute inset-0 opacity-30" />
+                    <span className="relative font-display text-4xl font-bold text-white">
                       {member.name
                         .split(" ")
                         .map((w) => w[0])
@@ -81,26 +81,25 @@ export default function TeamPage() {
         </div>
       </Section>
 
-      <Section className="bg-ink">
+      <Section className="border-t border-slate-200 bg-surface">
         <Reveal>
-          <div className="rounded-3xl bg-white/15 p-px">
-            <div className="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-ink px-8 py-14 text-center md:px-14">
-              <div className="relative">
-                <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
-                  Want to volunteer?
-                </h2>
-                <p className="mx-auto mt-4 max-w-xl text-slate-400">
-                  The chapter is run by volunteers. If you&apos;d like to help
-                  organize events, mentor students, or contribute your
-                  expertise, we&apos;d love to hear from you.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-8 inline-block rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
-                >
-                  Contact us
-                </Link>
-              </div>
+          <div className="relative overflow-hidden rounded-3xl bg-ieee-blue px-8 py-14 text-center md:px-14">
+            <div className="dot-grid absolute inset-0 opacity-25" />
+            <div className="relative">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
+                Want to volunteer?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-white/85">
+                The chapter is run by volunteers. If you&apos;d like to help
+                organize events, mentor students, or contribute your
+                expertise, we&apos;d love to hear from you.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-8 inline-block rounded-lg bg-white px-6 py-3.5 font-semibold text-ieee-blue transition hover:bg-slate-100"
+              >
+                Contact us
+              </Link>
             </div>
           </div>
         </Reveal>

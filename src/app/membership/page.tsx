@@ -88,24 +88,23 @@ export default function MembershipPage() {
         </div>
       </Section>
 
-      <Section className="bg-ink text-white">
+      <Section className="border-t border-slate-200 bg-surface">
         <Reveal>
           <SectionHeading
             eyebrow="[ 02 — How to join ]"
             title="Three simple steps"
-            dark
           />
         </Reveal>
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-3">
+        <div className="grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-3">
           {steps.map((s) => (
-            <div key={s.step} className="bg-ink p-8">
-              <span className="font-mono text-sm text-accent-bright">
+            <div key={s.step} className="bg-white p-8">
+              <span className="font-mono text-sm text-ieee-blue">
                 {s.step}
               </span>
-              <h3 className="mt-4 font-display text-xl font-semibold tracking-tight">
+              <h3 className="mt-4 font-display text-xl font-semibold tracking-tight text-ink">
                 {s.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
                 {s.description}
               </p>
             </div>
@@ -124,7 +123,7 @@ export default function MembershipPage() {
             href="https://www.comsoc.org/membership"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-white/30 hover:bg-white/5"
+            className="rounded-lg border border-slate-300 px-6 py-3.5 font-semibold text-ink transition hover:border-slate-400 hover:bg-white"
           >
             IEEE ComSoc membership
           </a>

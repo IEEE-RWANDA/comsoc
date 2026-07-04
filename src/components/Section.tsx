@@ -81,16 +81,16 @@ export function PageHero({
   subtitle?: string;
 }) {
   return (
-    <div className="relative overflow-hidden bg-ink pb-20 pt-36 text-white md:pb-24 md:pt-44">
+    <div className="relative overflow-hidden border-b border-slate-200 bg-white pb-20 pt-36 md:pb-24 md:pt-44">
       <div className="dot-grid absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
       <NetworkCanvas className="opacity-40" />
       <div className="relative mx-auto max-w-6xl px-4 md:px-6">
-        {eyebrow && <Eyebrow dark>{eyebrow}</Eyebrow>}
-        <h1 className="font-display text-4xl font-bold tracking-tight md:text-6xl">
+        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        <h1 className="font-display text-4xl font-bold tracking-tight text-ink md:text-6xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-5 max-w-2xl text-base text-slate-400 md:text-lg">
+          <p className="mt-5 max-w-2xl text-base text-slate-600 md:text-lg">
             {subtitle}
           </p>
         )}

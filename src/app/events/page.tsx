@@ -17,11 +17,11 @@ function EventRow({ event, first }: { event: EventItem; first: boolean }) {
         first ? "" : "border-t border-slate-200"
       }`}
     >
-      <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-ink text-white">
+      <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-ieee-blue text-white">
         <span className="font-display text-2xl font-bold leading-none">
           {d.getDate()}
         </span>
-        <span className="mt-1 font-mono text-[10px] uppercase tracking-widest text-slate-400">
+        <span className="mt-1 font-mono text-[10px] uppercase tracking-widest text-white/70">
           {d.toLocaleDateString("en-GB", { month: "short" })} {d.getFullYear()}
         </span>
       </div>
@@ -51,7 +51,7 @@ function EventRow({ event, first }: { event: EventItem; first: boolean }) {
             href={event.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
+            className="mt-4 inline-block rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
           >
             Register →
           </a>
