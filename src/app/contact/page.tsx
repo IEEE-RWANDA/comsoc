@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="[ Contact ]"
+        eyebrow="Contact"
         title="Get in touch"
         subtitle="Questions about membership, events, or partnerships? We'd love to hear from you."
       />
@@ -20,7 +20,7 @@ export default function ContactPage() {
       <Section>
         <div className="grid gap-16 lg:grid-cols-2">
           <Reveal>
-            <SectionHeading eyebrow="[ 01 — Reach out ]" title="Contact details" />
+            <SectionHeading eyebrow="Reach out" title="Contact details" />
             <ul className="space-y-6">
               <li>
                 <span className="block font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
@@ -72,7 +72,7 @@ export default function ContactPage() {
 
           <Reveal delay={100}>
             <SectionHeading
-              eyebrow="[ 02 — Partnerships ]"
+              eyebrow="Partnerships"
               title="Work with the chapter"
             />
             <p className="leading-relaxed text-slate-600">

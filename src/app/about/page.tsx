@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="[ About ]"
+        eyebrow="About"
         title="Who we are"
         subtitle="The first chapter under the newly established IEEE Rwanda Subsection — advancing communications engineering from Kigali."
       />
@@ -31,7 +31,7 @@ export default function AboutPage() {
       <Section>
         <div className="grid gap-16 lg:grid-cols-2">
           <Reveal>
-            <SectionHeading eyebrow="[ 01 — Mission ]" title="What drives us" />
+            <SectionHeading eyebrow="Mission" title="What drives us" />
             <div className="space-y-4 leading-relaxed text-slate-600">
               <p>
                 The IEEE Communications Society Rwanda Chapter promotes the
@@ -63,7 +63,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <SectionHeading eyebrow="[ 02 — Structure ]" title="Part of IEEE" />
+            <SectionHeading eyebrow="Structure" title="Part of IEEE" />
             <p className="leading-relaxed text-slate-600">
               The chapter operates under the IEEE Rwanda Subsection — the first
               IEEE geographic unit in Rwanda, launched in Kigali in July 2026
@@ -111,7 +111,7 @@ export default function AboutPage() {
       <Section className="border-t border-slate-200 bg-surface">
         <Reveal>
           <SectionHeading
-            eyebrow="[ 03 — Focus areas ]"
+            eyebrow="Focus areas"
             title="Technical scope"
             subtitle="Our activities span the breadth of modern communications technology."
           />

@@ -26,10 +26,16 @@ export function Eyebrow({
 }) {
   return (
     <p
-      className={`mb-4 font-mono text-xs uppercase tracking-[0.25em] ${
+      className={`mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] ${
         dark ? "text-accent-bright" : "text-ieee-blue"
       }`}
     >
+      <span
+        className={`h-0.5 w-6 rounded-full ${
+          dark ? "bg-accent-bright" : "bg-ieee-blue"
+        }`}
+        aria-hidden
+      />
       {children}
     </p>
   );

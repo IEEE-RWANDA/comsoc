@@ -56,7 +56,7 @@ export default function MembershipPage() {
   return (
     <>
       <PageHero
-        eyebrow="[ Membership ]"
+        eyebrow="Membership"
         title="Join the network"
         subtitle="The world's largest community of communications professionals — and its home in Rwanda."
       />
@@ -64,7 +64,7 @@ export default function MembershipPage() {
       <Section>
         <Reveal>
           <SectionHeading
-            eyebrow="[ 01 — Why join ]"
+            eyebrow="Why join"
             title="Membership benefits"
             subtitle="IEEE ComSoc membership is an investment in your technical career."
           />
@@ -91,7 +91,7 @@ export default function MembershipPage() {
       <Section className="border-t border-slate-200 bg-surface">
         <Reveal>
           <SectionHeading
-            eyebrow="[ 02 — How to join ]"
+            eyebrow="How to join"
             title="Three simple steps"
           />
         </Reveal>

@@ -37,8 +37,9 @@ export default function Home() {
         <NetworkCanvas className="opacity-50" />
 
         <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-40 md:px-6 md:pb-32 md:pt-52">
-          <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-ieee-blue">
-            {"// IEEE Communications Society — Rwanda"}
+          <p className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-ieee-blue">
+            <span className="h-0.5 w-6 rounded-full bg-ieee-blue" aria-hidden />
+            IEEE Communications Society · Rwanda
           </p>
           <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink md:text-7xl">
             Connecting Rwanda to the{" "}
@@ -118,7 +119,7 @@ export default function Home() {
       <Section>
         <Reveal>
           <SectionHeading
-            eyebrow="[ 01 — What we do ]"
+            eyebrow="What we do"
             title="Built for Rwanda's communications community"
             subtitle="Part of the joint IEEE Rwanda MTTS/ComSoc/AP-S Chapter under the IEEE Rwanda Subsection, based at Carnegie Mellon University Africa."
           />
@@ -173,7 +174,7 @@ export default function Home() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <Reveal>
             <SectionHeading
-              eyebrow="[ 02 — Events ]"
+              eyebrow="Events"
               title="Recent & upcoming"
             />
           </Reveal>
@@ -230,8 +231,9 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-3xl bg-ieee-blue px-8 py-14 md:px-14 md:py-16">
             <div className="dot-grid absolute inset-0 opacity-25" />
             <div className="relative">
-              <p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-white/70">
-                [ 03 — Join us ]
+              <p className="mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-white/70">
+                <span className="h-0.5 w-6 rounded-full bg-white/60" aria-hidden />
+                Join us
               </p>
               <h2 className="max-w-2xl font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
                 Be part of the network.

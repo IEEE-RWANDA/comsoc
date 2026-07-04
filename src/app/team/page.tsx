@@ -15,7 +15,7 @@ export default function TeamPage() {
   return (
     <>
       <PageHero
-        eyebrow="[ Team ]"
+        eyebrow="Team"
         title="Executive committee"
         subtitle="The volunteers who lead the chapter's activities."
       />
@@ -23,7 +23,7 @@ export default function TeamPage() {
       <Section>
         <Reveal>
           <SectionHeading
-            eyebrow="[ 01 — Leadership ]"
+            eyebrow="Leadership"
             title="The people behind the chapter"
             subtitle="Chapter officers are IEEE ComSoc members serving the Rwandan communications community."
           />

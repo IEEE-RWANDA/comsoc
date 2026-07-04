@@ -24,15 +24,19 @@ export default function Navbar() {
           className="group flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ieee-blue font-display text-sm font-bold text-white">
-            CS
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/comsoc-logo.svg"
+            alt="IEEE Communications Society"
+            className="h-10 w-auto"
+          />
+          <span className="h-8 w-px bg-slate-300" aria-hidden />
           <span className="leading-tight">
-            <span className="block font-display text-sm font-semibold tracking-tight text-ink">
-              IEEE ComSoc
+            <span className="block font-display text-base font-bold tracking-tight text-ieee-blue">
+              Rwanda
             </span>
             <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
-              Rwanda Chapter
+              Chapter
             </span>
           </span>
         </Link>

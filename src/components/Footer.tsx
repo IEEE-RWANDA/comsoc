@@ -40,15 +40,19 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4 md:px-6">
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ieee-blue font-display text-sm font-bold">
-              CS
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/comsoc-logo-white.svg"
+              alt="IEEE Communications Society"
+              className="h-11 w-auto"
+            />
+            <span className="h-9 w-px bg-white/25" aria-hidden />
             <span className="leading-tight">
-              <span className="block font-display text-sm font-semibold tracking-tight">
-                IEEE ComSoc
+              <span className="block font-display text-base font-bold tracking-tight">
+                Rwanda
               </span>
               <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">
-                Rwanda Chapter
+                Chapter
               </span>
             </span>
           </div>

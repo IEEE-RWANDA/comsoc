@@ -72,14 +72,14 @@ export default function EventsPage() {
   return (
     <>
       <PageHero
-        eyebrow="[ Events ]"
+        eyebrow="Events"
         title="Talks, workshops & sessions"
         subtitle="Open to members, students, and the wider tech community — in Kigali and online."
       />
 
       <Section>
         <Reveal>
-          <SectionHeading eyebrow="[ 01 — Calendar ]" title="Upcoming" />
+          <SectionHeading eyebrow="Calendar" title="Upcoming" />
         </Reveal>
         {upcoming.length > 0 ? (
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
@@ -111,7 +111,7 @@ export default function EventsPage() {
       {past.length > 0 && (
         <Section className="border-t border-slate-200 bg-surface">
           <Reveal>
-            <SectionHeading eyebrow="[ 02 — Archive ]" title="Past events" />
+            <SectionHeading eyebrow="Archive" title="Past events" />
           </Reveal>
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
             {past.map((event, i) => (
