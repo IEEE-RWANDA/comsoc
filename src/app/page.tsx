@@ -32,19 +32,18 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <div className="relative overflow-hidden border-b border-slate-200 bg-white">
-        <div className="dot-grid absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
-        <NetworkCanvas className="opacity-50" />
+      <div className="relative overflow-hidden bg-ieee-blue">
+        <div className="dot-grid absolute inset-0 opacity-30 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
+        <NetworkCanvas className="opacity-40" rgb="255, 255, 255" />
 
         <div className="relative mx-auto max-w-6xl px-4 pb-24 pt-40 md:px-6 md:pb-32 md:pt-52">
-          <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-ieee-blue">
+          <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-white/70">
             {"// IEEE Communications Society — Rwanda"}
           </p>
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-ink md:text-7xl">
-            Connecting Rwanda to the{" "}
-            <span className="text-ieee-blue">networks</span> of the future.
+          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl">
+            Connecting Rwanda to the networks of the future.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85">
             We bring together the engineers, researchers, and students building
             Rwanda&apos;s digital future — through technical talks, hands-on
             workshops, and a global community of communications professionals.
@@ -54,13 +53,13 @@ export default function Home() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
+              className="rounded-lg bg-white px-6 py-3.5 font-semibold text-ieee-blue transition hover:bg-slate-100"
             >
               Become a member
             </a>
             <Link
               href="/events"
-              className="group rounded-lg border border-slate-300 px-6 py-3.5 font-semibold text-ink transition hover:border-slate-400 hover:bg-slate-50"
+              className="group rounded-lg border border-white/40 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10"
             >
               Explore events{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -70,18 +69,18 @@ export default function Home() {
           </div>
 
           {/* Stat strip bridging into the light section */}
-          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-4">
+          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/25 bg-white/25 md:grid-cols-4">
             {[
               { value: 3, suffix: "", label: "IEEE societies, one chapter" },
               { value: 2026, suffix: "", label: "Chapter established" },
               { value: 400, suffix: "K+", label: "IEEE members worldwide" },
               { value: 160, suffix: "+", label: "Countries in the network" },
             ].map((s) => (
-              <div key={s.label} className="bg-white p-6">
-                <p className="font-display text-3xl font-bold text-ieee-blue md:text-4xl">
+              <div key={s.label} className="bg-ieee-blue p-6">
+                <p className="font-display text-3xl font-bold text-white md:text-4xl">
                   <StatCounter value={s.value} suffix={s.suffix} />
                 </p>
-                <p className="mt-1.5 text-xs uppercase tracking-widest text-slate-500">
+                <p className="mt-1.5 text-xs uppercase tracking-widest text-white/60">
                   {s.label}
                 </p>
               </div>
