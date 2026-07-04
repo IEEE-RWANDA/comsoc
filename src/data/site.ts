@@ -37,11 +37,10 @@ export const site = {
 export const events: EventItem[] = [
   {
     title: "IEEE Rwanda Subsection Launch & Societies Engagement Forum",
-    date: "2026-07-04",
+    date: "2026-07-17",
     location: "Kigali, Rwanda",
     description:
       "Official launch of the IEEE Rwanda Subsection, the first IEEE geographic unit in Rwanda, supported by IEEE Smart Cities, the IEEE Africa Council, and IEEE Region 8, with engagement sessions for IEEE societies including ComSoc.",
-    past: true,
   },
   {
     title:
