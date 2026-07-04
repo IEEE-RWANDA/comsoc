@@ -83,7 +83,7 @@ export default function TeamPage() {
 
       <Section className="bg-ink">
         <Reveal>
-          <div className="rounded-3xl bg-gradient-to-r from-accent to-ieee-blue p-px">
+          <div className="rounded-3xl bg-white/15 p-px">
             <div className="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-ink px-8 py-14 text-center md:px-14">
               <div className="relative">
                 <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
@@ -96,7 +96,7 @@ export default function TeamPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-8 inline-block rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
+                  className="mt-8 inline-block rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
                 >
                   Contact us
                 </Link>

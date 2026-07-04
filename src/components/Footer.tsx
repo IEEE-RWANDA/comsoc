@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4 md:px-6">
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-ieee-blue font-display text-sm font-bold">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ieee-blue font-display text-sm font-bold">
               CS
             </span>
             <span className="leading-tight">

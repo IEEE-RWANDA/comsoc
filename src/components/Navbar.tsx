@@ -24,7 +24,7 @@ export default function Navbar() {
           className="group flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-ieee-blue font-display text-sm font-bold text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ieee-blue font-display text-sm font-bold text-white">
             CS
           </span>
           <span className="leading-tight">
@@ -60,7 +60,7 @@ export default function Navbar() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-ink transition hover:bg-accent-bright"
+              className="ml-3 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
             >
               Join ComSoc
             </a>
@@ -108,7 +108,7 @@ export default function Navbar() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-ink"
+              className="mt-3 block rounded-lg bg-accent px-4 py-3 text-center text-sm font-semibold text-white"
             >
               Join ComSoc
             </a>

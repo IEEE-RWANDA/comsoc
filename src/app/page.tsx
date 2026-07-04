@@ -42,7 +42,7 @@ export default function Home() {
           </p>
           <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
             Connecting Rwanda to the{" "}
-            <span className="bg-gradient-to-r from-accent-bright to-cyan-300 bg-clip-text text-transparent">
+            <span className="text-accent-bright">
               networks
             </span>{" "}
             of the future.
@@ -57,7 +57,7 @@ export default function Home() {
               href="https://www.comsoc.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
+              className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
             >
               Become a member
             </a>
@@ -230,7 +230,7 @@ export default function Home() {
       {/* ── CTA band ─────────────────────────────────────────────────── */}
       <Section className="bg-ink">
         <Reveal>
-          <div className="rounded-3xl bg-gradient-to-r from-accent to-ieee-blue p-px">
+          <div className="rounded-3xl bg-white/15 p-px">
             <div className="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-ink px-8 py-14 md:px-14 md:py-16">
               <div className="relative">
                 <Eyebrow>[ 03 — Join us ]</Eyebrow>
@@ -244,7 +244,7 @@ export default function Home() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
                     href="/membership"
-                    className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-ink transition hover:bg-accent-bright"
+                    className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-white transition hover:brightness-110"
                   >
                     Membership benefits
                   </Link>

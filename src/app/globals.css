@@ -4,15 +4,15 @@
   --background: #ffffff;
   --foreground: #0f172a;
 
-  /* IEEE/ComSoc brand palette, as used on comsoc.org: IEEE Dark Blue
-     #002855 (deepened for page backgrounds), IEEE Cyan #00B5E2 as the
-     accent, IEEE Blue #00629B for text accents on light backgrounds,
-     ComSoc green #008542 for live/upcoming markers. */
+  /* Plain IEEE brand palette: IEEE Blue #00629B as the single accent,
+     IEEE Dark Blue #002855 (deepened for page backgrounds). accent-bright
+     is a lighter tint of IEEE Blue for legible text on dark backgrounds.
+     ComSoc green #008542 only marks live/upcoming events. */
   --ieee-blue: #00629b;
   --ieee-dark: #002855;
   --ink: #001529;
-  --accent: #00b5e2;
-  --accent-bright: #4dd0f0;
+  --accent: #00629b;
+  --accent-bright: #6ab0dc;
   --comsoc-green: #008542;
   --surface: #f5f6fa;
 }
