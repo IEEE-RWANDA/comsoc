@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero, Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { events, type EventItem } from "@/data/site";
@@ -46,6 +47,17 @@ function EventRow({ event, first }: { event: EventItem; first: boolean }) {
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
           {event.description}
         </p>
+        {event.image && (
+          <div className="relative mt-4 aspect-video w-full max-w-3xl overflow-hidden rounded-2xl">
+            <Image
+              src={event.image}
+              alt=""
+              fill
+              sizes="(min-width: 768px) 48rem, 100vw"
+              className="object-cover"
+            />
+          </div>
+        )}
         {event.registrationUrl && (
           <a
             href={event.registrationUrl}

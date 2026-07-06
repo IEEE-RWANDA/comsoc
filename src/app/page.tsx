@@ -247,6 +247,17 @@ export default function Home() {
                 </h3>
                 <p className="mt-1 text-sm text-slate-500">{event.location}</p>
               </div>
+              {event.image && (
+                <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl sm:w-32">
+                  <Image
+                    src={event.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 640px) 8rem, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <span className="hidden text-slate-300 transition-all group-hover:translate-x-1 group-hover:text-ieee-blue sm:block">
                 →
               </span>
