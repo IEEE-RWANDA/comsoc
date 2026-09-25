@@ -1,9 +1,38 @@
 [
   {
+    "title": "Introduction to Research and IEEE Paper Writing",
+    "date": "2026-11-14",
+    "time": "08:00–17:30 CAT (UTC+2)",
+    "location": "Carnegie Mellon University Africa, Regional ICT Center of Excellence Building, Kigali Innovation City, Bumbogo",
+    "description": "A free practical workshop jointly organised by IEEE IES Rwanda, IEEE MTT-S Rwanda and IEEE ComSoc Rwanda. Students, researchers and early-career engineers will work through research proposals, methodology and data analysis, IEEE papers and LaTeX, research posters, and conference selection and submission.",
+    "sourceUrl": "https://events.vtools.ieee.org/m/571852",
+    "registrationUrl": "https://events.vtools.ieee.org/event/register/571852"
+  },
+  {
+    "title": "IEEE–ALU Meet & Greet: Research, Innovation & Student Opportunities",
+    "date": "2026-09-18",
+    "time": "09:00–13:00 CAT (UTC+2)",
+    "location": "African Leadership University, Kenya-Burundi Room, Kigali Innovation City, Bumbogo",
+    "description": "An interactive IEEE Rwanda and ALU session on research participation, publications, conferences, project showcases and faculty collaboration. Co-hosted by the Rwanda joint ComSoc/MTT-S/AP-S chapter, with discussion of an IEEE Student Branch and Society student chapters at ALU.",
+    "sourceUrl": "https://events.vtools.ieee.org/m/571630",
+    "past": true
+  },
+  {
+    "title": "IEEE ComSoc Rwanda & Partner IEEE Societies Meet & Greet at ALU",
+    "date": "2026-08-08",
+    "time": "13:00–16:00 CAT (UTC+2)",
+    "location": "African Leadership University, Kigali Innovation City, Bumbogo",
+    "description": "A meet-and-greet for ALU students and IEEE volunteers covering membership, student leadership and technical communities, with discussion of the steps toward establishing an IEEE Student Branch and a Communications Society student chapter at ALU.",
+    "sourceUrl": "https://events.vtools.ieee.org/m/571011",
+    "past": true
+  },
+  {
     "title": "IEEE Rwanda Subsection Launch & Societies Engagement Forum",
     "date": "2026-07-17",
-    "location": "Kigali, Rwanda",
-    "description": "Official launch of the IEEE Rwanda Subsection, the first IEEE geographic unit in Rwanda, supported by IEEE Smart Cities, the IEEE Africa Council, and IEEE Region 8, with engagement sessions for IEEE societies including ComSoc."
+    "location": "Career Center, 7th Floor, behind Kigali Heights, Kigali, Rwanda",
+    "description": "Official launch of the IEEE Rwanda Subsection, the first IEEE geographic unit in Rwanda. The multi-society forum brought together the engineering community for society introductions, technical sessions, student leadership and industry–academia engagement, including ComSoc.",
+    "sourceUrl": "https://events.vtools.ieee.org/m/560894",
+    "past": true
   },
   {
     "title": "Twin Chapter Program: Joint Technical Session with IEEE ComSoc Kerala Chapter",

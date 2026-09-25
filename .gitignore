@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# unrelated to the website (Isoko project, proposal drafts, scratch)
+/isoko-network/
+/isoko-network-source.zip
+/isoko-prototype/
+/output/
+/tmp/

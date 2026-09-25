@@ -7,9 +7,11 @@ import teamData from "./team.json";
 export type EventItem = {
   title: string;
   date: string; // ISO date, e.g. "2026-08-15"
+  time?: string; // Display time, including the event's timezone
   location: string;
   description: string;
   registrationUrl?: string;
+  sourceUrl?: string; // Official event listing on IEEE vTools
   past?: boolean;
   image?: string; // optional path under /public, e.g. "/events/talk.jpg"
 };

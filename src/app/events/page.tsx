@@ -44,6 +44,9 @@ function EventRow({ event, first }: { event: EventItem; first: boolean }) {
         <p className="mt-1 font-mono text-xs uppercase tracking-widest text-slate-400">
           {event.location}
         </p>
+        {event.time && (
+          <p className="mt-2 text-sm font-medium text-slate-600">{event.time}</p>
+        )}
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
           {event.description}
         </p>
@@ -58,7 +61,17 @@ function EventRow({ event, first }: { event: EventItem; first: boolean }) {
             />
           </div>
         )}
-        {event.registrationUrl && (
+        {event.sourceUrl && (
+          <a
+            href={event.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-4 mt-4 inline-block text-sm font-semibold text-ieee-blue hover:underline"
+          >
+            Event details on IEEE vTools ↗
+          </a>
+        )}
+        {!event.past && event.registrationUrl && (
           <a
             href={event.registrationUrl}
             target="_blank"
